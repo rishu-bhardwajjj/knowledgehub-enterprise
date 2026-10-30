@@ -1,0 +1,34 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Uploaded documents and user data
+backend/uploads/
+
+# Java / Maven
+backend/target/
+backend/build/
+
+# React / Node
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/.vite/
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+
+# macOS
+.DS_Store
+__MACOSX/
+
+# Logs
+*.log
+
+# Project backup archives
+backend.zip
+frontend.zip
+backend2/
