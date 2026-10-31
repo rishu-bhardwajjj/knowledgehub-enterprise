@@ -12,9 +12,9 @@ spring:
           options:
             model: gemini-2.5-flash
         embedding:
+          api-key: ${GEMINI_API_KEY}
           text:
-            options:
-              model: text-embedding-004
+            model: text-embedding-004
 
 app:
   mongodb:
