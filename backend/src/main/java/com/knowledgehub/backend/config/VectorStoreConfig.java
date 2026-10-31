@@ -47,7 +47,7 @@ public class VectorStoreConfig {
                         vectorMongoTemplate, embeddingModel)
                 .collectionName(vectorCollection)
                 .vectorIndexName("vector_index")
-                .initializeSchema(true)
+                .initializeSchema(false)
                 .build();
     }
 
@@ -61,7 +61,7 @@ public class VectorStoreConfig {
                         vectorMongoTemplate, embeddingModel)
                 .collectionName(vectorCollection)
                 .vectorIndexName("vector_index")
-                .initializeSchema(true)
+                .initializeSchema(false)
                 .build();
     }
 }
