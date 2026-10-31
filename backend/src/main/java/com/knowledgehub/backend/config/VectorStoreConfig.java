@@ -1,4 +1,3 @@
-
 package com.knowledgehub.backend.config;
 
 import org.springframework.ai.embedding.EmbeddingModel;
@@ -18,6 +17,9 @@ public class VectorStoreConfig {
 
     @Value("${app.mongodb.vector-uri}")
     private String vectorMongoUri;
+
+    @Value("${app.mongodb.vector-collection:vector_store}")
+    private String vectorCollection;
 
     @Bean(name = "mongoTemplate")
     public MongoTemplate mongoTemplate() {
@@ -40,7 +42,7 @@ public class VectorStoreConfig {
 
         return MongoDBAtlasVectorStore.builder(
                         vectorMongoTemplate, embeddingModel)
-                .collectionName("vector_store")
+                .collectionName(vectorCollection)
                 .vectorIndexName("vector_index")
                 .initializeSchema(true)
                 .build();
